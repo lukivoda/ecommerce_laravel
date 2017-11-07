@@ -44,7 +44,7 @@
                                 <tr class="cart_item">
 
                                     <td class="product-remove">
-                                        <a href="#" class="product-del remove" title="Remove this item">
+                                        <a href="{{route('cart.delete',$product->rowId)}}" class="product-del remove" title="Remove this item">
                                             <i class="seoicon-delete-bold"></i>
                                         </a>
                                     </td>
@@ -77,7 +77,7 @@
                                     </td>
 
                                     <td class="product-subtotal">
-                                        <h5 class="total amount">{{$product->total}}</h5>
+                                        <h5 class="total amount">${{$product->total}}</h5>
                                     </td>
 
                                 </tr>

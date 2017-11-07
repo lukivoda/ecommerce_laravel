@@ -38,9 +38,17 @@ class ShoppingController extends Controller
 
     public function cart() {
 
-       // Cart::destroy();
+      //Cart::destroy();
 
         return view('cart');
+    }
+    
+    public function cart_delete($id) {
+        
+        Cart::remove($id);
+        
+        return redirect()->back();
+        
     }
 
 
